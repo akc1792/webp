@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["name"].value;
+    if (x == "") {
+        alert("Error: Name cannot be blank!");
+	
+        return false;
+    }
+	x = document.forms["myForm"]["pw"].value;
+     if(x == ""){
+        alert("Error: Password cannot be blank!");
+	
+        return false;
+    }
+	if(x.length<6){
+        alert("Error: Password must contain atleast six characters!");
+	
+        return false;
+    }
+x = document.forms["myForm"]["cc"];
+ var cardno = /^[0-9]{16}$/;  
+  if(x.value.match(cardno))  
+        {  
+      return true;  
+        }  
+      else  
+        {  
+        alert("Not a valid  credit card number!");  
+        return false;  
+        } 
+
+
+
+	}
+</script>
+</head>
+
+<body>
+<form action = "#" method = "post" onsubmit="return validateForm()" name="myForm">
+<fieldset>
+<input type = "text" name = "name"/>Name <br/>
+<input type= "password" name = "pw" /> Password<br/>
+<input type = "text" name = "cc" /> Credit Card Number<br/>
+<input type = "submit"/>
+</fieldset>
+</form>
+</body>
+</html>

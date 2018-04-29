@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ td {
+    border: 1px solid blue ;
+    border-collapse:collapse;
+}
+
+
+
+button{
+
+    background-color: lightblue;
+    border: 1px solid blue;
+    color: black;
+    padding:20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  
+    cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+
+<center>
+
+<button type="button" onclick="toggle_colors()"> Toggle Colors </button>
+
+<button type="button" onclick="toggle_borders()"> Toggle Rounded Borders</button>
+
+<button type="button" onclick="myFunction()"> Add A New Box </button>
+
+
+
+</center>
+
+
+
+
+
+<table id="myTable">
+  <tr id="myRow">
+   
+    <td width="60px" height="60px" style="color:white"></td>
+  </tr>
+</table><br>
+
+
+<p id="ans"> </p>
+<script>
+function myFunction() {
+    var row = document.getElementById("myRow");
+    var x = row.insertCell(0);
+   // x.innerHTML = "New cell";
+    x.width="60px";
+    x.height="60px";
+   
+  //  x.style.color="white";
+}
+
+function toggle_colors()
+{
+  x=document.getElementById("myRow");  
+
+  
+  if(x.style.backgroundColor =="white")
+  {	x.style.backgroundColor ="#C41E3A";
+	
+	
+	
+  }
+   else
+       { x.style.backgroundColor ="white";
+
+	
+
+}
+}
+
+function toggle_borders()
+{
+
+x=document.getElementsByTagName("td");
+for(var i=0;i<x.length;i++)
+
+{
+  if( x[i].style.borderRadius=="20%")
+	x[i].style.borderRadius="0%";
+ else
+x[i].style.borderRadius="20%"  
+
+}
+
+}
+
+
+</script>
+
+</body>
+</html>
+

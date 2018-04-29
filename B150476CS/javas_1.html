@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+button{
+
+    background-color: lightblue;
+    border: 1px solid blue;
+    color: black;
+    padding: 20px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    font-size: 16px;
+    margin:3px;
+    cursor: pointer;
+    float:left;
+  
+}
+#wrap{
+width:500px;
+}
+.left{
+
+float:left;
+
+text-align:center;
+top-padding:10px;
+width:150px;
+height:60px;
+}
+.right{
+width:240px;
+height:120px;
+float:right;
+}
+
+</style>
+</head>
+<body>
+<p id="demo">A website is a collection of related web pages, including multimedia content, typically identified
+with a common domain name, and published on at least one web server</p>
+
+<br>
+<center>
+<div id="wrap">
+
+<div class="left"><p id="pl"><input type="text" name="text" id="text" style="height:60px;width:150px;border-color:blue;padding:10px;" autofocus></p></div>
+<div class="right"><button type="button" onclick="myFunction()"> Change color</button></div>
+
+
+</div>
+</center>
+
+
+<script>
+function myFunction() {
+    var text= document.getElementById("text").value;
+    
+    document.getElementById("demo").style.color = text;
+   
+}
+</script>
+
+</body>
+</html>
+
